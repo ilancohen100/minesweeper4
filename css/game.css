@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color:white;
+}
+  
+div{
+  align-self: center;
+}
+  
+.cell {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  /* font-size: 1.5em; */
+}
+.board-container{
+  /* background-color: aqua; */
+}
+.board-table{
+  background-color: gray;
+}
+.hints-panel {
+  background-color: blueviolet;
+}
+.smiley{
+  font-size: 3em
+  width: 40px;
+  height: 40px;
+}
+.safeCell{
+  background-color: crimson;
+}
+.minePositioned{
+  background-color: blue;
+}
+.minePositionedHidden{
+  
+}

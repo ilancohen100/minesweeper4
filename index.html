@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/game.css"/>
+    <title>Ilans MineSweeper</title>
+</head>
+<body oncontextmenu="{return false;}" onload="initGame()">
+    <!-- <div><button onclick="undo()">undo</button></div> -->
+    <div>
+        <button class = "safeClick" disabled  onclick = "safeClick()">Safe Click </button> <span> Safe Clicks Left: </span><span class = "safeClicks-container">3</span>
+    </div>
+    <div class="controlPanel">
+        <button class = "manualSelection"   onclick = "manualSelection(this)">Start Planting Mines manually </button> 
+        <label for="level-select">Choose a level:</label>
+        <select onchange="levelSelected(value)" name="levels" id="level-select">
+            <option value="">--Please choose an option--</option>
+            <option value="0">Beginner</option>
+            <option value="1">Medium</option>
+            <option value="2">Expert</option>
+            <option value="3">Ilan</option>
+        </select>
+        <button onclick ="smileyClick()"class="smiley">😃</button>
+        <span>Timer:</span><span class = "timer-container">0</span><span> ,Best Time:</span><span class = "bestTime-container">0</span> 
+    </div>
+    <div class="lifePanel">
+        <h1>LifeLeft <span class = "lifeLeftContainer"></span></h1>
+    </div>
+    <div class="hints-panel">
+        <button onclick = "hintClicked()">Hint</button>
+        <span class="hintsCountContainer">3</span> 
+        <span>Hints Left.</span>
+        <span class="hintSafeModeSpan"> Beware of Mines!!</span> 
+    </div>
+    <div class="board-container"></div>
+    <script src="js/util.js"></script> 
+    <script src="js/game.js"></script>
+</body>
+</html>
